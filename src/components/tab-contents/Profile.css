@@ -1,0 +1,8 @@
+.profile-items {
+  padding-top: 20px !important;
+  margin-top: 20px;
+  border-top: 1px solid #efefef; }
+  .profile-items:nth-child(1) {
+    padding-top: 0 !important;
+    margin-top: 0;
+    border-top: 0; }
