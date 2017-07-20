@@ -1,31 +1,40 @@
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
+import _ from 'lodash';
 
-import { Profile, Career } from '../tab-contents';
+import { Constant } from '../../common';
+import { ProjectDetail } from '../tab-contents/career';
 
 const tabs = [
   {
     menuItem: '인코어드 테크놀로지스',
-    render: () => (
-      <Tab.Pane>
-        <Profile />
-      </Tab.Pane>
-    ),
+    itemKey: 'encored',
   },
   {
     menuItem: '루테스',
-    render: () => (
-      <Tab.Pane>
-        <Career />
-      </Tab.Pane>
-    ),
+    itemKey: 'lutes',
+  },
+  {
+    menuItem: '기타',
+    itemKey: 'etc',
   },
 ];
 
-const MenuTab = () => {
+const ProjectTab = () => {
+  const projects = Constant.projects;
+  const renderTabs = tabs.map((tab) => {
+    const projectBytab = _.find(projects, { id: tab.itemKey });
+    tab.render = () => (
+      <Tab.Pane>
+        <ProjectDetail items={projectBytab.items} />
+      </Tab.Pane>
+    );
+    return tab;
+  });
+
   return (
-    <Tab menu={{ pointing: true }} panes={tabs} />
+    <Tab menu={{ pointing: true }} panes={renderTabs} />
   );
 };
 
-export default MenuTab;
+export default ProjectTab;
