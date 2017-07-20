@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, List, Divider, Label } from 'semantic-ui-react';
 
-import { Constant } from '../../common';
+import { Constant } from '../../../common';
 import './Profile.css';
 
 const createSkills = () => {

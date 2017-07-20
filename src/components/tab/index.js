@@ -1,3 +1,7 @@
-import MyTab from './MyTab';
+import MenuTab from './MenuTab';
+import ProjectTab from './ProjectTab';
 
-export default MyTab;
+export {
+  MenuTab,
+  ProjectTab,
+};

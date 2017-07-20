@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Grid } from 'semantic-ui-react';
 
-import { MainHeader, MyTab } from '../components';
+import { MainHeader, MenuTab } from '../components';
 import './styles/Main.css';
 
 class Main extends Component {
@@ -15,7 +15,7 @@ class Main extends Component {
           <MainHeader />
         </Grid>
         <div className="l-body">
-          <MyTab />
+          <MenuTab />
         </div>
       </div>
     );

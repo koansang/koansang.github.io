@@ -1,7 +1,7 @@
 import { MainHeader } from './header';
-import MyTab from './tab';
+import { MenuTab } from './tab';
 
 export {
   MainHeader,
-  MyTab,
+  MenuTab,
 };

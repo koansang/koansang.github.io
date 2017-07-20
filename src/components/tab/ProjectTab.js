@@ -5,7 +5,7 @@ import { Profile, Career } from '../tab-contents';
 
 const tabs = [
   {
-    menuItem: 'Profile',
+    menuItem: '인코어드 테크놀로지스',
     render: () => (
       <Tab.Pane>
         <Profile />
@@ -13,7 +13,7 @@ const tabs = [
     ),
   },
   {
-    menuItem: 'Career',
+    menuItem: '루테스',
     render: () => (
       <Tab.Pane>
         <Career />
@@ -22,10 +22,10 @@ const tabs = [
   },
 ];
 
-const MyTab = () => {
+const MenuTab = () => {
   return (
-    <Tab menu={{ secondary: true, pointing: true }} panes={tabs} />
+    <Tab menu={{ pointing: true }} panes={tabs} />
   );
 };
 
-export default MyTab;
+export default MenuTab;

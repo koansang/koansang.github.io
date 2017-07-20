@@ -1,5 +1,5 @@
-import Career from './Career';
-import Profile from './Profile';
+import { Career } from './career';
+import { Profile } from './profile';
 
 export {
   Career,
